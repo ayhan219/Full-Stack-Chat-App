@@ -99,22 +99,22 @@ const Chat = () => {
       {/* Sidebar for user list */}
       <div className="w-[25%] h-full bg-gradient-to-b from-gray-800 to-gray-900 text-white">
         <div className="text-center py-6 border-b border-gray-700">
-          <h2 className="text-2xl font-bold tracking-wide">Active Users</h2>
+          <h2 className="text-sm sm:text-2xl font-bold tracking-wide">Active Users</h2>
         </div>
-        <div className="overflow-y-auto h-[calc(100%-80px)] px-4 py-2 space-y-4">
+        <div className="overflow-y-auto h-[calc(100%-80px)]  md:px-4 py-2 space-y-4 z-0">
           {allUser.map((item, index) => (
             <div
               key={index}
               onClick={() => findId(item._id)}
-              className="flex items-center p-3 space-x-3 rounded-lg cursor-pointer bg-gray-800 hover:bg-gray-700 transition transform hover:scale-[1.02] hover:shadow-lg"
+              className="flex items-center p-3 space-x-3 rounded-lg cursor-pointer bg-gray-800 hover:bg-gray-700 transition transform hover:scale-[1.02] hover:shadow-lg z-0"
             >
               <img
                 src={item.profileImage !==null ? `http://localhost:5000${item.profileImage}` : "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMAAzAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUBAgMGB//EADAQAQACAQIFAgQGAQUAAAAAAAABAgMEEQUSITFRQWETImJxIzJCUoGx8DM0csHR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwD6YA0yAAAAAAAADNYm08tazafEJGPQ6i/6eWPqkEYT44Zk9clY/gtwzJEfLkrM+NgQBvlxXw25clZifdoAAAAAAAAAAAAAAAAAAAnaTQWy/Pl6U9K+s/8AjHDtN8W/xLx8lZ7eZXCarniw48UbY6xDoCKAA46rDXPimltvafEqXJp8tJnmx328xV6AXUeaFvrdFGSvPijbJHp5VHb02WAAIAAAAAAAAAAAAMxEzO0d57MO2jpz6rHHpv1BdafFGLDSkekdfd1BloAAAAAAUvEsXwtRzVj5bxv/ACulbxmPw8dvfZYlVgywqAAAAAAAAAAAACXwyN9VHtEoiXwv/dx9pFXQDKgAAAAACv4v/o0/5LBX8Yn8KkfUsSqthlhUAAAAAAAAAAAAEjh+8aukxEzHaenZHW/CqxGmmY7zadyrE4BlQAAAAABW8Y3mMcbTt3mduyya3rFq2raN4mOpB51gGmQAAAAAAAAAAABbcItvhvXxbdUpXD88Yc+1p2paNp+5Vi7COwyoAAAAAA0zW5Md7eKy3QOJ54rinFH5rdJ+xBUgNMgAAAAAAAAAAAACi24TfmwWp+2f7T1NwvLFNRyz0i8bfzC5ZrQAgAAAA0y3+Hjtef0xMvPd1vxTJyaeaRPW/T+FQ1ErAAgAAAAAAAAAAAAADMTtMTE9Y6rnRauM9IrafxI7x5UqXwyN9XHTtWUqxdAIoAA1yXrjrNrTtENkbiMb6PJt7f2Cp1OedRlm8/ljpWPZyY9xpAAQAAAAAAAAAAAAAATuERvqL2+j/tB8+y14TimuKck/r7fYqxPZBlQAGJctXHNpssfRLsxaN4mJ7A82N8uO2LJalu9WjTIAAAAAAAAAAAAB/myqEbzO0dZ8Jen0OXLtNo5K+/dZ6fSYcERy13t+6e6WmK/SaC+SYtm3rWOsRPeVtWIrWIiNohkZUAAAAABF1mkrqNpjpeO0qjLhyYbbZKzHjw9C1vSt68t6xaPEro84LPU8OiZ5sE7fTb1V+XFfFPLkrNZ91TGgCgAiAAAADLfDiyZ7cuKN/MrTTaDHi2tf57+fSCqgafRZc/Xbkp5lZ6fR4sPaOa37p7pImqAIAAAAAAAAAADW9KXrtesWj3bAKzUcN72wW2+mVfelsduXJWYn3ejcsuGmau2SsSuo8+Jmq0F8W9sfz09d+8IceVQAAddNgtnyfDr09Zt7OS54ZhjHp4tP5r9d/b0KsSMGGmGkVxxtH9ugMqAAAAAAAAAAAAAAAAAAKziGjiItmxR72qs2LRvG09gecYdtXi+BqbU9O8fZyaR//9k="}
                 alt="User Avatar"
-                className="w-12 h-12 rounded-full border-2 border-gray-600"
+                className="w-6 h-6 md:w-12 md:h-12 rounded-full border-2 border-gray-600"
               />
               <div className="flex flex-col">
-                <h3 className="text-lg font-semibold">{item.username}</h3>
+                <h3 className="text-sm md:text-lg font-semibold">{item.username}</h3>
                 <p className="text-gray-400 text-sm">
                   {item.status || "Online"}
                 </p>

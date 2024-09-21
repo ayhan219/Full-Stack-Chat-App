@@ -26,7 +26,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className='w-full h-24 bg-[#18212F] text-white flex items-center justify-between px-4 sm:px-10 z-50'>
+        <div className='w-full h-24 bg-[#18212F] text-white flex items-center justify-between px-4 sm:px-10 z-0'>
             <Link to={"/chat"}><div className='text-3xl font-bold'>
                 Chat Site
             </div></Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
             {/* Mobile menu */}
             {isOpen && (
-                <div className='absolute top-24 left-0 w-full bg-[#18212F] md:hidden'>
+                <div className='absolute top-24 left-0 w-full bg-[#18212F] md:hidden z-0'>
                     <div className='flex flex-col space-y-2 px-4 py-2'>
                         {user && <Link to={"/profile"}><button className='bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded transition duration-300'>Profile</button></Link>}
                         {user !== null ? <Link to={"/chat"}><button className='bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded transition duration-300'>Chat</button></Link> : <Link to="/login">
